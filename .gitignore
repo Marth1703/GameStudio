@@ -3,6 +3,8 @@
 Thumbs.db
 Desktop.ini
 
+/Slopedown/DesignSheet.pdf
+
 # Editors and local workspace metadata
 .vscode/
 .idea/
@@ -35,6 +37,3 @@ env/
 
 # Common generated output
 coverage/
-
-# Project-specific material kept locally
-/Slopedown/DesignSheet.pdf
