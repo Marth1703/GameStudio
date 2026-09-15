@@ -5,26 +5,22 @@ A small collection of games called Game Studio. There are two playable prototype
 <table>
   <tr>
     <td width="50%" valign="top">
-      <a href="Skyrush/index.html">
-        <img src="data/Skyrush_teaser.png" alt="Skyrush gameplay teaser" width="100%">
-      </a>
-      <h2><a href="Skyrush/index.html">Skyrush</a></h2>
-      <p>Steer through ten increasingly difficult waves, collect turret power, upgrade your ship and defend the dimensional gate.</p>
-      <p><a href="Skyrush/index.html">Play Skyrush -&gt;</a></p>
+      <img src="data/Skyrush_teaser.png" alt="Skyrush gameplay teaser" width="640" height="360">
+      <h2>Skyrush</h2>
+      <p>A tower defense game, where you are the "tower". Upgrade your ship and stop 10 increasingly difficult waves from passing through.</p>
+      <p>Available through the Game Studio launcher.</p>
     </td>
     <td width="50%" valign="top">
-      <a href="Slopedown/index.html">
-        <img src="data/Slopedown_teaser.png" alt="Slopedown gameplay teaser" width="100%">
-      </a>
-      <h2><a href="Slopedown/index.html">Slopedown</a></h2>
-      <p>Control your snowboarder down a course, collect coins, hit boosts and finish the run as quickly as possible.</p>
-      <p><a href="Slopedown/index.html">Play Slopedown -&gt;</a></p>
+      <img src="data/Slopedown_teaser.png" alt="Slopedown gameplay teaser" width="640" height="360">
+      <h2>Slopedown</h2>
+      <p>Control your snowboarder down a course, collect coins, hit boost-gates and finish the run as quickly as possible.</p>
+      <p>Available through the Game Studio launcher.</p>
     </td>
   </tr>
 </table>
 
-## Run locally
-Play the games here:
+# Play
+Play the games here: <a href="https://marth1703.github.io/GameStudio/">https://marth1703.github.io/GameStudio/</a>
 
 ## Run locally
 
