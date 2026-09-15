@@ -1,0 +1,20 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#08151f">
+<title>Skyrush · Game Studio</title><link rel="stylesheet" href="styles.css"><script src="text.js" defer></script><script src="game.js" defer></script>
+</head>
+<body>
+<canvas id="game" aria-label="Skyrush flight viewport"></canvas>
+<div id="hud" hidden>
+<header><div class="integrity"><span>HEALTH</span><div class="meter"><i id="healthBar"></i></div><span id="healthText"></span></div><div id="mission"></div><button id="pause" aria-label="Pause game">II</button></header>
+<div id="message" role="status" aria-live="polite"></div>
+<div class="cockpit">
+<div class="boost-label">BOOST <span>Q</span></div><div id="boosts" role="img" aria-label="3 of 3 boosts ready"><div><i></i></div><div><i></i></div><div><i></i></div></div>
+<div class="switches"><div class="weapon-wrap"><button id="weapon"><span class="button-key">F</span> · ROCKET</button><div class="reload"><i id="weaponCooldown"></i></div></div><button id="drive"><span class="button-key">SPACE</span> · DRIVING</button></div>
+<div id="upgradeButton" role="progressbar" aria-label="Power toward next upgrade" aria-valuemin="0" aria-valuemax="70" aria-valuenow="0"><i id="upgradeFill"></i><span id="upgradeLabel">UPGRADE POWER · 0 / 70</span></div>
+</div>
+</div>
+<main id="overlay"></main><button id="sound" aria-label="Toggle sound">SOUND ON</button>
+</body>
+</html>

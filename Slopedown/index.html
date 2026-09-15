@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="styles.css" />
+
+<!--Editor settings of this project-->
+<meta type="settings" autoview="Graph|2023-01-10T15:26:17.329Z|95477" project="{'name':'Slopedown','graphAutoView':'Graph|2023-01-10T15:26:17.329Z|95477'}" panels="[{'type':'PanelProject','state':{}},{'type':'PanelGraph','state':{'graph':'Graph|2023-01-10T15:26:17.329Z|95477'}}]" />
+
+<!--Activate the following line to include the FUDGE-version of Oimo-Physics. You may want to download a local copy to work offline and be independent from future changes!-->
+<script type="text/javascript" src="https://jirkadelloro.github.io/FUDGE/Physics/OimoPhysics.js"></script>
+
+<!--Load FUDGE. You may want to download local copies to work offline and be independent from future changes! Developers working on FUDGE itself may want to create symlinks-->
+<script type="text/javascript" src="https://jirkadelloro.github.io/FUDGE/Core/Build/FudgeCore.js"></script>
+<script type="text/javascript" src="https://jirkadelloro.github.io/FUDGE/Aid/Build/FudgeAid.js"></script>
+<script type="text/javascript" src="https://jirkadelloro.github.io/FUDGE/UserInterface/Build/FudgeUserInterface.js"></script>
+<!--Link internal resources. The editor only loads the first, but at runtime, multiple files can contribute-->
+<link type="resources" src="Internal.json" />
+
+<!--Load custom scripts-->
+<script type="text/javascript" src="text.js"></script>
+<script type="text/javascript" src="Script/Build/Script.js" editor="true"></script>
+
+<!--Load Autoview script-->
+<script type="text/javascript" src="Autoview.js"></script>
+
+</head>
+<body>
+<!--Canvas for FUDGE to render to-->
+<canvas class="fullscreen">
+</canvas>
+
+<div id="game-ui" aria-live="polite">
+    <section id="start-overlay" class="start-overlay" aria-labelledby="start-title">
+        <div class="start-card">
+            <h1 id="start-title" data-slopedown-text="title"></h1>
+            <p class="start-tagline" data-slopedown-text="tagline"></p>
+            <div class="start-controls" aria-label="Game controls">
+                <div class="start-key-grid" aria-hidden="true">
+                    <kbd class="start-key-w">W</kbd>
+                    <kbd class="start-key-a">A</kbd>
+                    <kbd class="start-key-s">S</kbd>
+                    <kbd class="start-key-d">D</kbd>
+                    <kbd class="start-key-space">SPACE</kbd>
+                </div>
+                <div class="start-control-copy">
+                    <p data-slopedown-html="controls.forward"></p>
+                    <p data-slopedown-html="controls.steer"></p>
+                    <p data-slopedown-html="controls.brake"></p>
+                    <p data-slopedown-html="controls.jump"></p>
+                </div>
+            </div>
+            <section class="level-select" aria-labelledby="level-title">
+                <h2 id="level-title" data-slopedown-text="courseSelect"></h2>
+                <div id="level-buttons" class="level-buttons" role="radiogroup" aria-label="Course difficulty">
+                    <button type="button" class="level-button is-selected" data-level="easy" role="radio" aria-checked="true"><span data-slopedown-text="levels.easy.name"></span><small data-slopedown-text="levels.easy.description"></small></button>
+                    <button type="button" class="level-button" data-level="normal" role="radio" aria-checked="false"><span data-slopedown-text="levels.normal.name"></span><small data-slopedown-text="levels.normal.description"></small></button>
+                    <button type="button" class="level-button" data-level="hard" role="radio" aria-checked="false"><span data-slopedown-text="levels.hard.name"></span><small data-slopedown-text="levels.hard.description"></small></button>
+                </div>
+            </section>
+            <p id="hard-briefing" hidden data-slopedown-text="hardBriefing"></p>
+            <p id="start-status" class="start-status" data-slopedown-text="status.loading"></p>
+            <button id="start-button" type="button" disabled data-slopedown-text="status.loading"></button>
+            <a class="menu-link" href="../index.html" data-slopedown-text="studio"></a>
+        </div>
+    </section>
+
+    <section class="race-hud" aria-label="Race information">
+        <span class="hud-label" data-slopedown-text="hud.raceLabel"></span>
+        <div class="stat-row"><span data-slopedown-text="hud.time"></span><strong id="hud-time">0.000s</strong></div>
+        <div class="stat-row"><span data-slopedown-text="hud.coins"></span><strong id="hud-coins">0</strong></div>
+    </section>
+
+    <section class="input-viewer" aria-label="Input viewer and speed">
+        <span class="hud-label" data-slopedown-text="hud.controls"></span>
+        <div class="key-grid">
+            <span class="key key-w" data-key="forward">W</span>
+            <span class="key key-a" data-key="left">A</span>
+            <span class="key key-s" data-key="brake">S</span>
+            <span class="key key-d" data-key="right">D</span>
+            <span class="key key-space" data-key="jump">SPACE</span>
+        </div>
+        <div class="speed-readout"><span data-slopedown-text="hud.speed"></span><strong id="hud-speed">0</strong><em data-slopedown-text="hud.speedUnit"></em></div>
+    </section>
+
+    <section id="pause-overlay" class="pause-overlay" hidden aria-live="assertive">
+        <span class="hud-label" data-slopedown-text="pause.kicker"></span>
+        <h2 data-slopedown-text="pause.title"></h2>
+        <p data-slopedown-html="pause.resume"></p>
+        <button id="pause-restart-button" type="button" data-slopedown-text="pause.restart"></button>
+        <a class="menu-link" href="index.html" data-slopedown-text="pause.quit"></a>
+    </section>
+
+    <section id="finish-summary" class="finish-summary" hidden aria-labelledby="finish-title">
+        <span id="finish-kicker" class="hud-label"></span>
+        <h2 id="finish-title"></h2>
+        <div id="result-grid" class="result-grid">
+            <div id="result-time-stat"><span data-slopedown-text="results.time"></span><strong id="result-time">0.000s</strong></div>
+            <div id="result-coins-stat"><span data-slopedown-text="results.coins"></span><strong id="result-coins">0</strong></div>
+            <div id="result-score-stat"><span data-slopedown-text="results.score"></span><strong id="result-score">0</strong></div>
+        </div>
+        <div id="leaderboard-wrap" class="leaderboard-wrap">
+            <h3 data-slopedown-text="results.leaderboard"></h3>
+            <ol id="session-leaderboard"></ol>
+        </div>
+        <button id="retry-button" type="button" data-slopedown-text="results.retry"></button>
+        <a id="main-menu-button" class="menu-link" href="index.html" data-slopedown-text="results.mainMenu"></a>
+    </section>
+    <button id="sound-toggle" type="button" aria-pressed="false" data-slopedown-text="results.soundOff"></button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+# Material referenced by spaceship.obj.
+# The game supplies its visible material through FUDGE's ComponentMaterial,
+# but OBJ loaders still require this file named by the mtllib declaration.
+newmtl Material
+Ka 0.200000 0.200000 0.200000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ns 250.000000
+d 1.000000
+illum 2
