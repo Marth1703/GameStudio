@@ -5,9 +5,8 @@
 - Medieninformatik 5. Semester
 - Prima
 - Prof. Jirka Dell'Oro-Friedl
-- Game: https://marth1703.github.io/PrimaWiSe22/Slopedown/index.html
-- Code: https://github.com/Marth1703/PrimaWiSe22/tree/main/Slopedown
-- Design: https://marth1703.github.io/PrimaWiSe22/Slopedown/DesignSheet.pdf
+- Game: https://marth1703.github.io/GameStudio/Slopedown/index.html
+- Code: https://github.com/Marth1703/GameStudio/tree/main/Slopedown
 
 ### Interactions
                     
@@ -17,7 +16,7 @@ W  | Increses Speed forwards
 A  | Slide left
 S  | Brakes 
 D  | Slide right
-Space  | Hold and release to Execute Jump
+Space  | Hold and release to Jump
 
 ### Criteria
 
