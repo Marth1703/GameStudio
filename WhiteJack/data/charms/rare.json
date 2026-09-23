@@ -1,0 +1,107 @@
+{
+  "rarity": "rare",
+  "charms": [
+    {
+      "id": "seven-signal",
+      "name": "Seven Signal",
+      "icon": "seven",
+      "rarity": "rare",
+      "price": 38,
+      "requires": 3,
+      "text": "Sevens are 4× as likely in your draws.",
+      "configure": [
+        {
+          "type": "weight-rank",
+          "rank": "7",
+          "multiplier": 4
+        }
+      ]
+    },
+    {
+      "id": "long-night",
+      "name": "Long Night",
+      "icon": "moon",
+      "rarity": "rare",
+      "price": 32,
+      "text": "+2 playable hands in every Depth, including this one.",
+      "configure": [
+        {
+          "type": "add",
+          "key": "extraHands",
+          "amount": 2
+        }
+      ]
+    },
+    {
+      "id": "looking-glass",
+      "name": "Looking Glass",
+      "icon": "twins",
+      "rarity": "rare",
+      "price": 36,
+      "text": "Twins side-bet profit is multiplied by 3.",
+      "configure": [
+        {
+          "type": "multiply",
+          "key": "twins",
+          "multiplier": 3
+        }
+      ]
+    },
+    {
+      "id": "silk-suit",
+      "name": "Silk Suit",
+      "icon": "suit",
+      "rarity": "rare",
+      "price": 38,
+      "text": "Win with every card in the same suit for 2× profit.",
+      "win": [
+        {
+          "type": "same-suit",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "id": "five-fingers",
+      "name": "Five Fingers",
+      "icon": "hand",
+      "rarity": "rare",
+      "price": 40,
+      "text": "Five or more cards without busting always wins at 3:1.",
+      "configure": [
+        {
+          "type": "enable",
+          "key": "fiveCard"
+        }
+      ]
+    },
+    {
+      "id": "midnight",
+      "name": "Midnight Oil",
+      "icon": "lamp",
+      "rarity": "rare",
+      "price": 42,
+      "text": "All main-hand profit is multiplied by 1 + (0.15 × Depth).",
+      "win": [
+        {
+          "type": "per-depth",
+          "amount": 0.15
+        }
+      ]
+    },
+    {
+      "id": "dice-roll",
+      "name": "Dice Roll",
+      "icon": "dice",
+      "rarity": "rare",
+      "price": 46,
+      "text": "Once per hand, pick a card. It becomes a different random 2-7.",
+      "configure": [
+        {
+          "type": "enable",
+          "key": "dice"
+        }
+      ]
+    }
+  ]
+}

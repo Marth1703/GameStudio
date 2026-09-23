@@ -1,0 +1,20 @@
+{
+  "rarity": "legendary",
+  "charms": [
+    {
+      "id": "sleight-of-seven",
+      "name": "Sleight of Seven",
+      "icon": "seven",
+      "rarity": "legendary",
+      "price": 52,
+      "text": "Once per hand, turn one of your cards into a 7. Keeps its suit.",
+      "configure": [
+        {
+          "type": "enable",
+          "key": "seven"
+        }
+      ],
+      "enabled": false
+    }
+  ]
+}

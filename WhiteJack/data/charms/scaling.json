@@ -1,0 +1,54 @@
+{
+  "charms": [
+    {
+      "id": "seven-chorus", "name": "Seven Chorus", "icon": "seven", "rarity": "rare", "price": 43, "requires": 3,
+      "text": "Each 7 in a winning hand adds 40% main-hand profit, up to three 7s. Scales with seven-heavy builds.",
+      "win": [{ "type": "scale", "metric": "sevens", "amount": 0.4, "maximum": 3 }]
+    },
+    {
+      "id": "royal-court", "name": "Royal Court", "icon": "crown", "rarity": "rare", "price": 40,
+      "text": "Each face card in a winning hand adds 25% profit, up to four. Pairs with Royal Company.",
+      "win": [{ "type": "scale", "metric": "faces", "amount": 0.25, "maximum": 4 }]
+    },
+    {
+      "id": "ace-collector", "name": "Ace Collector", "icon": "ace", "rarity": "rare", "price": 41,
+      "text": "Each Ace in a winning hand adds 35% profit, up to three. Pairs with Ace Up.",
+      "win": [{ "type": "scale", "metric": "aces", "amount": 0.35, "maximum": 3 }]
+    },
+    {
+      "id": "patchwork", "name": "Patchwork", "icon": "suit", "rarity": "rare", "price": 42,
+      "text": "Each different suit after the first in a winning hand adds 30% profit.",
+      "win": [{ "type": "scale", "metric": "suits", "amount": 0.3, "maximum": 3 }]
+    },
+    {
+      "id": "long-haul", "name": "Long Haul", "icon": "hand", "rarity": "rare", "price": 45,
+      "text": "Each card after the first two in a winning hand adds 30% profit, up to four extra cards.",
+      "win": [{ "type": "scale", "metric": "extraCards", "amount": 0.3, "maximum": 4 }]
+    },
+    {
+      "id": "phoenix-ticket", "name": "Phoenix Ticket", "icon": "wind", "rarity": "epic", "price": 56,
+      "text": "Each Second Chance redraw used this hand adds 70% winning profit, up to three redraws.",
+      "win": [{ "type": "scale", "metric": "rescues", "amount": 0.7, "maximum": 3 }]
+    },
+    {
+      "id": "forked-fate", "name": "Forked Fate", "icon": "twins", "rarity": "epic", "price": 58,
+      "text": "Each split this hand adds 50% profit to every winning main hand, up to two splits.",
+      "win": [{ "type": "scale", "metric": "splits", "amount": 0.5, "maximum": 2 }]
+    },
+    {
+      "id": "cabinet", "name": "Cabinet of Curios", "icon": "bag", "rarity": "epic", "price": 60,
+      "text": "Each other owned Charm adds 12% winning profit, up to six Charms.",
+      "win": [{ "type": "scale", "metric": "charms", "amount": 0.12, "maximum": 6 }]
+    },
+    {
+      "id": "echo-pair", "name": "Echo Pair", "icon": "eyes", "rarity": "epic", "price": 53,
+      "text": "Each adjacent same-rank pair in a winning hand adds 40% profit, up to three pairs. Pairs with Twins.",
+      "win": [{ "type": "scale", "metric": "pairs", "amount": 0.4, "maximum": 3 }]
+    },
+    {
+      "id": "rolling-thunder", "name": "Rolling Thunder", "icon": "bolt", "rarity": "epic", "price": 62,
+      "text": "Each consecutive win before this hand adds 20% profit, up to ten wins.",
+      "win": [{ "type": "scale", "metric": "streak", "amount": 0.2, "maximum": 10 }]
+    }
+  ]
+}

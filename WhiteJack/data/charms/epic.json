@@ -1,0 +1,97 @@
+{
+  "rarity": "epic",
+  "charms": [
+    {
+      "id": "double-omen",
+      "name": "Double Omen",
+      "icon": "eyes",
+      "rarity": "epic",
+      "price": 48,
+      "text": "Consecutive natural blackjacks pay 4× profit from the second onward.",
+      "win": [
+        {
+          "type": "natural-streak",
+          "minimum": 1,
+          "multiplier": 4
+        }
+      ]
+    },
+    {
+      "id": "white-flame",
+      "name": "White Flame",
+      "icon": "flame",
+      "rarity": "epic",
+      "price": 45,
+      "text": "Every 3 consecutive naturals permanently adds +0.25× blackjack profit.",
+      "after": [
+        {
+          "type": "natural-every",
+          "count": 3,
+          "growth": "blackjack",
+          "amount": 0.25
+        }
+      ]
+    },
+    {
+      "id": "momentum",
+      "name": "Momentum",
+      "icon": "bolt",
+      "rarity": "epic",
+      "price": 50,
+      "text": "Each consecutive winning hand multiplies the next win's profit by 1.35. Up to 16 stacks.",
+      "win": [
+        {
+          "type": "win-streak",
+          "base": 1.35,
+          "maximum": 16
+        }
+      ]
+    },
+    {
+      "id": "blood-pact",
+      "name": "Blood Pact",
+      "icon": "drop",
+      "rarity": "epic",
+      "price": 55,
+      "text": "Every winning hand permanently adds +0.10× to all main-hand profit.",
+      "after": [
+        {
+          "type": "on-win",
+          "growth": "multiplier",
+          "amount": 0.1
+        }
+      ]
+    },
+    {
+      "id": "seventh-heaven",
+      "name": "Seventh Heaven",
+      "icon": "star",
+      "rarity": "epic",
+      "price": 58,
+      "requires": 3,
+      "text": "Jackpot side-bet profit is multiplied by 3.",
+      "configure": [
+        {
+          "type": "multiply",
+          "key": "jackpot",
+          "multiplier": 3
+        }
+      ]
+    },
+    {
+      "id": "snowball",
+      "name": "Snowball",
+      "icon": "orb",
+      "rarity": "epic",
+      "price": 52,
+      "text": "Every natural blackjack permanently adds +0.25× to all main-hand profit.",
+      "after": [
+        {
+          "type": "on-natural",
+          "growth": "multiplier",
+          "amount": 0.25
+        }
+      ]
+    }
+  ]
+}

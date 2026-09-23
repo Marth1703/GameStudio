@@ -1,0 +1,189 @@
+{
+  "rarity": "common",
+  "charms": [
+    {
+      "id": "second-wind",
+      "name": "Second Wind",
+      "icon": "wind",
+      "rarity": "common",
+      "price": 24,
+      "text": "One extra bust redraw every hand.",
+      "configure": [
+        {
+          "type": "add",
+          "key": "rescues",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "id": "ace-up",
+      "name": "Ace Up",
+      "icon": "ace",
+      "rarity": "common",
+      "price": 28,
+      "text": "Aces are 3× as likely in your draws.",
+      "configure": [
+        {
+          "type": "weight-rank",
+          "rank": "A",
+          "multiplier": 3
+        }
+      ]
+    },
+    {
+      "id": "royal-company",
+      "name": "Royal Company",
+      "icon": "crown",
+      "rarity": "common",
+      "price": 28,
+      "text": "10s and face cards are 1.8× as likely.",
+      "configure": [
+        {
+          "type": "weight-ranks",
+          "ranks": [
+            "10",
+            "J",
+            "Q",
+            "K"
+          ],
+          "multiplier": 1.8
+        }
+      ]
+    },
+    {
+      "id": "heart-locket",
+      "name": "Heart Locket",
+      "icon": "heart",
+      "rarity": "common",
+      "price": 22,
+      "text": "Hearts are 3× as likely in your draws.",
+      "configure": [
+        {
+          "type": "weight-suit",
+          "suit": "H",
+          "multiplier": 3
+        }
+      ]
+    },
+    {
+      "id": "black-spade",
+      "name": "Black Spade",
+      "icon": "spade",
+      "rarity": "common",
+      "price": 22,
+      "text": "Spades are 3× as likely in your draws.",
+      "configure": [
+        {
+          "type": "weight-suit",
+          "suit": "S",
+          "multiplier": 3
+        }
+      ]
+    },
+    {
+      "id": "blood-diamond",
+      "name": "Blood Diamond",
+      "icon": "diamond",
+      "rarity": "common",
+      "price": 22,
+      "text": "Diamonds are 3× as likely in your draws.",
+      "configure": [
+        {
+          "type": "weight-suit",
+          "suit": "D",
+          "multiplier": 3
+        }
+      ]
+    },
+    {
+      "id": "clover",
+      "name": "Clover",
+      "icon": "clover",
+      "rarity": "common",
+      "price": 22,
+      "text": "Clubs are 3× as likely in your draws.",
+      "configure": [
+        {
+          "type": "weight-suit",
+          "suit": "C",
+          "multiplier": 3
+        }
+      ]
+    },
+    {
+      "id": "velvet",
+      "name": "Velvet Touch",
+      "icon": "bow",
+      "rarity": "common",
+      "price": 34,
+      "text": "Natural blackjack profit rises from 1.5× to 2×.",
+      "configure": [
+        {
+          "type": "add",
+          "key": "blackjack",
+          "amount": 0.5
+        }
+      ]
+    },
+    {
+      "id": "safety-net",
+      "name": "Safety Net",
+      "icon": "shield",
+      "rarity": "common",
+      "price": 26,
+      "text": "Recover 25% of each lost main wager.",
+      "configure": [
+        {
+          "type": "add",
+          "key": "refund",
+          "amount": 0.25
+        }
+      ]
+    },
+    {
+      "id": "gold-tooth",
+      "name": "Gold Tooth",
+      "icon": "tooth",
+      "rarity": "common",
+      "price": 26,
+      "text": "A dealer bust adds +0.5× to your winning main-hand profit.",
+      "configure": [
+        {
+          "type": "add",
+          "key": "bustBonus",
+          "amount": 0.5
+        }
+      ]
+    },
+    {
+      "id": "lucky-penny",
+      "name": "Lucky Penny",
+      "icon": "coin",
+      "rarity": "common",
+      "price": 18,
+      "text": "20% chance to double your positive net profit each hand.",
+      "configure": [
+        {
+          "type": "enable",
+          "key": "luckyPenny"
+        }
+      ]
+    },
+    {
+      "id": "payday",
+      "name": "Payday",
+      "icon": "bag",
+      "rarity": "common",
+      "price": 28,
+      "text": "Every main-hand win earns +0.25× profit before multipliers.",
+      "configure": [
+        {
+          "type": "add",
+          "key": "winBonus",
+          "amount": 0.25
+        }
+      ]
+    }
+  ]
+}

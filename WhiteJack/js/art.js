@@ -1,0 +1,30 @@
+// Original, code-native pixel artwork. One small SVG sprite vocabulary, no downloads.
+const shapes = {
+  heart: 'M3 4h4v2h2V4h4v2h2v5h-2v2h-2v2H7v-2H5v-2H3Z',
+  spade: 'M8 1h2v2h2v2h2v2h2v5h-3v-1h-2v3h2v2H5v-2h2v-3H5v1H2V7h2V5h2V3h2Z',
+  diamond: 'M8 1h2v3h2v2h2v2h2v2h-2v2h-2v2h-2v3H8v-3H6v-2H4v-2H2V8h2V6h2V4h2Z',
+  clover: 'M7 2h4v2h2v3h-2v2h2V7h3v2h1v4h-2v2h-4v-2h-1v3h3v2H5v-2h3v-3H7v2H3v-2H1V9h2V7h3v2h1V7H5V4h2Z',
+  seven: 'M3 2h12v4h-2v3h-2v3H9v5H5v-5h2V9h2V6h2V5H3Z',
+  ace: 'M7 1h4v3h2v4h2v9h-4v-5H7v5H3V8h2V4h2Zm0 7h4V5H7Z',
+  crown: 'M2 4h2v3h3V3h4v4h3V4h2v10H2Zm1 12h12v2H3Z',
+  wind: 'M2 4h10V2h4v5H2Zm2 5h12v3H4Zm-2 5h8v3H2Z',
+  eyes: 'M1 5h6v2h2v5H7v2H1Zm10 0h6v9h-6v-2H9V7h2Z',
+  flame: 'M9 1h3v4h2v4h2v6h-3v2H5v-2H2V9h2V6h2v5h2V5h1Z',
+  moon: 'M6 1h6v2H8v3H6v6h2v3h6v2H6v-2H3v-3H1V6h2V3h3Z',
+  bow: 'M2 4h3v2h3v2h2V6h3V4h3v11h-3v-2h-3v-2H8v2H5v2H2Z',
+  bolt: 'M9 1h6l-4 6h5L5 18l2-8H2Z',
+  drop: 'M8 1h2v3h2v3h2v3h2v5h-3v2H5v-2H2v-5h2V7h2V4h2Z',
+  twins: 'M1 3h7v12H1Zm9 0h7v12h-7ZM3 5v8h3V5Zm9 0v8h3V5Z',
+  star: 'M7 1h4v5h6v4h-4v3h2v4h-4v-3H7v3H3v-4h2v-3H1V6h6Z',
+  shield: 'M2 2h14v10h-2v2h-2v2H6v-2H4v-2H2Zm4 3v6h2v2h2v-2h2V5Z',
+  suit: 'M3 2h4v3h4V2h4v5h2v9H1V7h2Zm5 5v7h2V7Z',
+  hand: 'M2 7h2V3h2v6h1V1h2v8h1V2h2v7h1V4h2v7h2v3h-2v3H5v-3H2Z',
+  tooth: 'M3 2h12v2h2v7h-2v6h-4v-6H7v6H3v-6H1V4h2Z',
+  coin: 'M5 1h8v2h3v3h1v7h-3v3H4v-3H1V6h1V3h3Zm3 3v3H5v2h3v4h3V9h2V7h-2V4Z',
+  bag: 'M5 1h8v3h-2v2h3v3h2v7H2V9h2V6h3V4H5Z',
+  lamp: 'M7 1h4v3h3v3h2v8H2V7h2V4h3Zm0 6v6h4V7Zm-3 9h10v2H4Z',
+  dice: 'M2 2h14v14H2ZM5 5h3v3H5Zm5 5h3v3h-3Zm0-5h3v3h-3Z',
+  orb: 'M5 1h8v2h3v3h1v7h-3v3H4v-3H1V6h1V3h3Zm0 3v3H3v4h3V7h4V4Z',
+};
+export const icon = (name, cls = '') => `<svg class="pixel-icon ${cls}" viewBox="0 0 18 18" aria-hidden="true" shape-rendering="crispEdges"><path fill="currentColor" fill-rule="evenodd" d="${shapes[name] || shapes.star}"/></svg>`;
+export const dealerArt = `<svg class="dealer-art" viewBox="0 0 120 104" aria-hidden="true" shape-rendering="crispEdges"><path fill="#14261e" d="M40 12h40v8h12v12h8v48h12v24H8V80h12V32h8V20h12Z"/><path fill="#090e0c" d="M40 20h40v8h8v12h8v44H24V40h8V28h8Z"/><path fill="#314638" d="M40 25h8v-5h24v5h8v8h8v40h-8V42h-8V32H48v10h-8v31h-8V33h8Z"/><path fill="#d6d2ac" d="M40 44h16v4H40Zm24 0h16v4H64Z"/><path fill="#7e8c69" d="M44 48h8v4h-8Zm24 0h8v4h-8Z"/><path fill="#1d3026" d="M48 76h24v12h16v16H32V88h16Z"/><path fill="#080f0b" d="M52 76h16v8h-4v20h-8V84h-4Z"/><path fill="#687250" d="M56 88h8v4h-8Z"/></svg>`;
