@@ -4,14 +4,14 @@ A small collection of games called Game Studio. There are three playable prototy
 
 <table width="100%">
   <tr>
-    <td width="100%" valign="top">
+    <td width="50%" valign="top">
       <img src="data/Skyrush_teaser.png" alt="Skyrush gameplay teaser" width="100%">
       <h2>Skyrush</h2>
       <p>A tower defense game, where you are the "tower". Upgrade your ship and stop 10 increasingly difficult waves from passing through.</p>
     </td>
   </tr>
   <tr>
-    <td width="100%" valign="top">
+    <td width="50%" valign="top">
       <img src="data/Slopedown_teaser.png" alt="Slopedown gameplay teaser" width="100%">
       <h2>Slopedown</h2>
       <p>Control your snowboarder down a course, collect coins, hit boost-gates and finish the run as quickly as possible.</p>
